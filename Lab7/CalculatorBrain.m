@@ -7,6 +7,7 @@
 //
 
 #import "CalculatorBrain.h"
+#import <math.h>
 
 @implementation CalculatorBrain
 
@@ -72,6 +73,11 @@
 - (void)tangentCalculationString {
     double input = [_calculationString doubleValue];
     _calculationString = [NSString stringWithFormat:@"%.02f",tan(input) ];
+}
+
+- (void)cosineCalculationString {
+    double input = [_calculationString doubleValue];
+    _calculationString = [NSString stringWithFormat:@"%.02f",cos(input) ];
 }
 - (void)commitAction {
     double operand1 = [_savedOperand doubleValue];

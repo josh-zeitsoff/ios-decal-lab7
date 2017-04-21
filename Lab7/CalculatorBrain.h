@@ -13,7 +13,7 @@ typedef enum actionType : long {
     multiply = 0,
     subtract,
     add,
-    equal
+    equal,
 } actionType;
 @property actionType currentAction;
 @property NSString *calculationString;
@@ -26,6 +26,7 @@ typedef enum actionType : long {
 - (void)negateCalculationString;
 - (BOOL)hasDecimalPlaces: (double)operand1 _:(double)operand2;
 - (void)tangentCalculationString;
+- (void)cosineCalculationString;
 - (void)commitAction;
 - (BOOL)recognizeAction: (int)tag;
 @end

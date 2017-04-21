@@ -22,7 +22,6 @@
     _Cbrain = [[CalculatorBrain alloc] init];
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -50,6 +49,12 @@
     [_Cbrain tangentCalculationString];
     [self updatecalculationView];
 }
+
+- (IBAction)cos:(id)sender {
+    [_Cbrain cosineCalculationString];
+    [self updatecalculationView];
+}
+
 - (IBAction)actionPressed:(id)sender {
     UIButton *pressedButton = (UIButton *)sender;
     if ([_Cbrain recognizeAction:(int)pressedButton.tag]) {
